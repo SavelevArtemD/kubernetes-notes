@@ -1,8 +1,8 @@
-#What is Kubernetes
+# What is Kubernetes
 Kubernetes is a portable, extensible platform for managing containerized workloads and services,
 that facilitates both declarative configuration and automation.
 
-###Kubernetes provides:
+### Kubernetes provides:
 - Service discovery and load balancing
 - Storage orchestration
 - Automated rollouts and rollbacks
@@ -10,7 +10,7 @@ that facilitates both declarative configuration and automation.
 - Self-healing
 - Secret and configuration management
 
-###What Kubernetes is not
+### What Kubernetes is not
 - Does not limit the types of applications supported
 - Does not deploy source code and does not build your application
 - Does not dictate logging, monitoring, or alerting solutions
@@ -18,13 +18,13 @@ that facilitates both declarative configuration and automation.
 - Does not provide nor adopt any comprehensive machine configuration, maintenance, management, or self-healing systems
 - Kubernetes is not a mere orchestration system. In fact, it eliminates the need for orchestration
 
-#Kubernetes Components
+# Kubernetes Components
 
 A Kubernetes cluster consists of a set of worker machines, called nodes, that run containerized applications.
 Every cluster has at least one worker node. The worker node(s) host the Pods that are the components of the application workload.
 The control plane manages the worker nodes and the Pods in the cluster.
 
-###Control Plane Components
+### Control Plane Components
 The control plane's components make global decisions about the cluster (for example, scheduling),
 as well as detecting and responding to cluster events
 (for example, starting up a new pod when a deployment's replicas field is unsatisfied).
@@ -52,7 +52,7 @@ as well as detecting and responding to cluster events
 - cloud-controller-manager
     A Kubernetes control plane component that embeds cloud-specific control logic
 
-###Node Components
+### Node Components
 
 - kubelet
     An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod.
