@@ -61,3 +61,15 @@ Valid statuses:
 - Succeeded: all containers within this pod have been terminated successfully and will not be restarted
 - Failed: all containers within this pod have been Terminated, and at least one container returned a failture code
 - Unknown
+
+# Secrets 
+Secrets provides a way in Kubernetes to distribute credentials, keys, psswords or "secret" data to the pods   
+
+Cases:  
+- As env variables
+- As file:  
+  - uses volumes which have files 
+  - dotenv files
+- External image to pull secrets (from a private img repository)  
+
+  
