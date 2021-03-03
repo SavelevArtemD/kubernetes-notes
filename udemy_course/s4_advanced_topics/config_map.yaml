@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: example
+    spec:
+      containers:
+        - name: demo
+          image: image_url
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DRIVER
+              valueFrom:
+                configMapKeyRef:
+                  name: app-config
+                  key: driver
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+      volumes:
+        - name: config-volume
+          configMap:
+            name: app-config
