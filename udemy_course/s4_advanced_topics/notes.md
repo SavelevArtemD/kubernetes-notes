@@ -32,3 +32,8 @@ apps based on HTTP rules (host and prefixes)
 External DNS automatically create the necessary DNS records in your external DNS server (like route 53) 
 For every hostname that you use in ingress, it'll create a new recod to send traffic to your LoadBalancer.  
 
+#Volumes    
+
+VOlumes allow store data outside the container. When a container stops, all data on the container itself is lost.   
+Persistent Volumes in Kubernetes allow you attach a volume to a container that will wxists even when the container stops.   
+
