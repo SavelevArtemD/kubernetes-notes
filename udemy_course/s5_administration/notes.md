@@ -1,6 +1,6 @@
 # Master services   
 
-![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/architecture_overview.png) 
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/architecture_overview.png) 
 
 To communicate with cluster we are using `kubectl` which is api client and needs authorization.
 When we send a new object like `pod definition` it will be stored in `etcd` - separate technology like data store, and rest interface 
@@ -90,7 +90,7 @@ On AWS: kubenet networking
 If you deploy cluster on premice or on cloud without VPC you have to use:   
 - CNI: container network interface - software that provides libraries/ plugins for network interfaces within containers(Calico, Weave)  
 - An Overlay Network (for example `Flannel`)    
-![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/flannel.png)   
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/flannel.png)   
   
 
 # Node maintenance  
@@ -109,4 +109,36 @@ A new object is automatically created with:
 if you want to decommision a node:  
 - `kubectl drain nodename --grace-period=600`   
 - `kubectl drain nodename --force`  
+
+# TLS on AWS ELB  
+
+It's possible to setup tls using annotations. Also you can setup logging with annotations:    
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/log_annotations_in_aws.png)    
+
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/tls_annotations.png)  
+
+# Admission Controllers     
+
+An admission controller can intercept requests sent to the K8s API server. For example, when you create new pod, the request can be intercepted
+by an admission controller. This interception happens after the user is authenticated (token or cert) and authorized (for ex RBAC)
+and before the object is persisted (saved) in the backend   
+
+Great list of controllers in [official demo](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/)    
+
+You can use admission controllers and their webhooks to run your custom software for this hooks:
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/admission_controlling.png)    
+
+# Pod security Polices  
+
+Pod security Polices is an admission controller, which will be invoked at pod creation or modification
+
+Pod security Polices enable you to do control the security aspects of the pods creation & updates:
+- Deny using privileged mode in pods    
+- Control what volumes can be mounted
+- Make sure containers only run within a UID/Gid range, or make shure that containers can't run as root
+
+# etcd
+
+etcd is a distributed and reliable key-value store for the most critical data of a distributed system and used by k8s
+as data backend. It's secure with automatic TLS and optional client certificate authorization, and using Raft consensus algorithm
 
