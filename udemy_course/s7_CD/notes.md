@@ -16,4 +16,4 @@ Deploying can be done with kubectl or helm.
 
 Skaffold pipeline:  
 
-![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s7_CD/pictures/lskaffold_pipeline.png)    
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s7_CD/pictures/skaffold_pipeline.png)    
