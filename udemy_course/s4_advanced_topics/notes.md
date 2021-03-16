@@ -30,6 +30,7 @@ you can use the ingress controller as a gateway for all your public apps,
 and only use 1 LoadBalancer in front of the ingress-controller
 
 ![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s4_advanced_topics/pictures/ingress.png)     
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 # External DNS   
 
@@ -42,7 +43,8 @@ apps based on HTTP rules (host and prefixes)
 External DNS automatically create the necessary DNS records in your external DNS server (like route 53) 
 For every hostname that you use in ingress, it'll create a new recod to send traffic to your LoadBalancer.  
 
-![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s4_advanced_topics/pictures/external_DNS.png)
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s4_advanced_topics/pictures/external_DNS.png)    
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 # Volumes    
 
