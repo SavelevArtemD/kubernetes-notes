@@ -1,6 +1,7 @@
 # Master services   
 
-![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/architecture_overview.png) 
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/architecture_overview.png)    
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 To communicate with cluster we are using `kubectl` which is api client and needs authorization.
 When we send a new object like `pod definition` it will be stored in `etcd` - separate technology like data store, and rest interface 
@@ -90,7 +91,8 @@ On AWS: kubenet networking
 If you deploy cluster on premice or on cloud without VPC you have to use:   
 - CNI: container network interface - software that provides libraries/ plugins for network interfaces within containers(Calico, Weave)  
 - An Overlay Network (for example `Flannel`)    
-![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/flannel.png)   
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/flannel.png)      
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
   
 
 # Node maintenance  
@@ -113,9 +115,11 @@ if you want to decommision a node:
 # TLS on AWS ELB  
 
 It's possible to setup tls using annotations. Also you can setup logging with annotations:    
-![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/log_annotations_in_aws.png)    
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/log_annotations_in_aws.png)       
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 ![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/tls_annotations.png)  
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 # Admission Controllers     
 
@@ -126,7 +130,8 @@ and before the object is persisted (saved) in the backend
 Great list of controllers in [official demo](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/)    
 
 You can use admission controllers and their webhooks to run your custom software for this hooks:
-![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/admission_controlling.png)    
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s5_administration/pictures/admission_controlling.png)        
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 # Pod security Polices  
 

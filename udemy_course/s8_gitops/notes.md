@@ -8,6 +8,7 @@ With flux, you declaratively describer the entire desired state of your system i
 
 Flux overview:  
 ![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s8_gitops/pictures/flux_pipeline.png)        
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 
 

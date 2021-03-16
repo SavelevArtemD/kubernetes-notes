@@ -1,4 +1,4 @@
-[lecture url](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/learn/lecture/6058574#overview)  
+[lecture url](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/learn/lecture/6058574#overview)      
 
 # Node Architecture     
 Containers can communicate with each other throw `localhost` and port number    
@@ -6,6 +6,8 @@ Containers can communicate with each other throw `localhost` and port number
 `Kubelet` is responsible to launch nodes and commmunicate with the master node  
 `Kube-proxy` feed information about pods to `iptables` - like firewall whis is root traffic.
 Also have rules to route traffic between nodes.     
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s3_basics/pictures/architecture_overview.png)            
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 ## Scaling  
 If application stateless - you can scale it horizontally.   
@@ -53,6 +55,9 @@ Indicates whether the container is ready to serve requests. If the check fails, 
 will not be restarted, but the Pod's IP address will be removed from the Service.
 
 # Pod State 
+
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s3_basics/pictures/pod_lifecycle.png)    
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 Valid statuses: 
 - Pending: pod has been accepted but is not running 

@@ -2,7 +2,9 @@
 
 The DNS service can be used within pods to find other services running on the same cluster. 
 Multiple containers within 1 pod don't neeed this service, as they can contact each other directly (via localhost:port)
-To make DNS work, a pod will need a Service definition. 
+To make DNS work, a pod will need a Service definition.     
+
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s4_advanced_topics/pictures/dns_work.png)    
 
 DNS service runs in the pod under `kube-system` namespace, expose as a service with some ip-address
 
@@ -27,6 +29,8 @@ With an ingress controller you can potentially save costs. Rather than using 1 L
 you can use the ingress controller as a gateway for all your public apps, 
 and only use 1 LoadBalancer in front of the ingress-controller
 
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s4_advanced_topics/pictures/ingress.png)     
+
 # External DNS   
 
 On public cloud providers, it's possible to use the ingress controller to reduce the cost of LoadBalancer 
@@ -36,7 +40,9 @@ apps based on HTTP rules (host and prefixes)
 - Works only for HTTP-based applications  
 
 External DNS automatically create the necessary DNS records in your external DNS server (like route 53) 
-For every hostname that you use in ingress, it'll create a new recod to send traffic to your LoadBalancer.
+For every hostname that you use in ingress, it'll create a new recod to send traffic to your LoadBalancer.  
+
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s4_advanced_topics/pictures/external_DNS.png)
 
 # Volumes    
 
@@ -46,7 +52,9 @@ Persistent Volumes in Kubernetes allow you attach a volume to a container that w
 You have a Kubernetes cluster within a single availability zone on AWS. The pod "app1" has a persistent volume (AWS EBS) attached. 
 The pod get killed, what happens with the data in the persistent volume?
 **Answer:** You have a Kubernetes cluster within a single availability zone on AWS. The pod "app1" has a persistent volume (AWS EBS) attached. 
-The pod get killed, what happens with the data in the persistent volume?
+
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s4_advanced_topics/pictures/volumes.png)     
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 # Pod Presets    
 
@@ -133,6 +141,9 @@ Types:
 Main use case: co-located pods (Redis near with the app, pods in the same availability zone and so on)  
 
 When writing pod affinity rules, you need to specify a topology domain, called topologyKey which is refers to a node label.
+
+![alt text](https://github.com/SavelevArtemD/kubernetes-notes/blob/master/udemy_course/s4_advanced_topics/pictures/interpod_affinity.png)       
+[source](https://www.udemy.com/course/learn-devops-the-complete-kubernetes-course/)
 
 # Taints and tolerations    
 
